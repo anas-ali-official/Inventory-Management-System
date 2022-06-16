@@ -8,6 +8,7 @@ const StockSchema = new mongoose.Schema({
  size:String,
  rate:Number,
  qty:Number,
+ sale_rate:Number,
  location:String,
  active:Boolean,
  date_created:String,

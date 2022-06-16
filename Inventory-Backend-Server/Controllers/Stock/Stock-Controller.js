@@ -32,6 +32,9 @@ const newStock = (req, res, next) => {
   else if(body.qty == undefined || body.qty == null){
     return res.status(400).json({ error: "Qty is Missing" });
   }
+  else if(body.sale_rate == undefined || body.sale_rate == null){
+    return res.status(400).json({ error: "Sale Rate is Missing" });
+  }
   else if(body.location == undefined || body.location == null){
     return res.status(400).json({ error: "Location is Missing" });
   }
@@ -48,6 +51,7 @@ const newStock = (req, res, next) => {
    size:body.size,
    rate:body.rate,
    qty:body.qty,
+   sale_rate:body.sale_rate,
    location:body.location,
    active:body.active,
    date_created:body.date_created,
