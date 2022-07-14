@@ -32,9 +32,9 @@ const newStock = (req, res, next) => {
   else if(body.qty == undefined || body.qty == null){
     return res.status(400).json({ error: "Qty is Missing" });
   }
-  else if(body.sale_rate == undefined || body.sale_rate == null){
+  /*else if(body.sale_rate == undefined || body.sale_rate == null){
     return res.status(400).json({ error: "Sale Rate is Missing" });
-  }
+  }*/
   else if(body.location == undefined || body.location == null){
     return res.status(400).json({ error: "Location is Missing" });
   }
